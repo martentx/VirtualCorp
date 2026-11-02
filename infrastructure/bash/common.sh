@@ -57,7 +57,7 @@ log_ok() {
     echo -e "${GREEN}[ OK ]${NC} $*"
 }
 
-log_err() {
+log_error() {
     echo -e "${RED}[ERROR]${NC} $*"
 }
 

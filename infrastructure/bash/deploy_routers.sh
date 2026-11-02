@@ -15,27 +15,27 @@ check_prerequisites
 
 # Desplegament de mikrotik0
 create_router "mikrotik0" 2200 \
-  --intnets "r0-r1" "dmz" \
-  --ips "10.1.0.225/30" "10.1.0.193/27" \
+  --intnets "r0-r1" "DMZ"  \
+  --ips "10.6.0.225/30" "10.6.0.193/27" \
   --nat
 
 # Desplegament de mikrotik1
 create_router "mikrotik1" 2201 \
-  --intnets "r0-r1" "r1-r2" "pl0" \
-  --ips "10.1.0.226/30" "10.1.0.229/30" "10.1.0.1/25" \
-  --gateway "10.1.0.225"
+  --intnets "r0-r1" "r1-r2" "Pl0" \
+  --ips "10.6.0.226/30" "10.6.0.229/30" "10.6.0.1/25" \
+  --gateway "10.6.0.225"
 
 # Desplegament de mikrotik2
 create_router "mikrotik2" 2202 \
-  --intnets "r1-r2" "r2-r3" "pl1" "pl2" \
-  --ips "10.1.0.230/30" "10.1.0.233/30" "10.1.1.1/24" "10.1.2.1/24" \
-  --gateway "10.1.0.229"
+  --intnets "r1-r2" "r2-r3" "Pl1" "Pl2" \
+  --ips "10.6.0.230/30" "10.6.0.233/30" "10.6.1.1/24" "10.6.2.1/24" \
+  --gateway "10.6.0.229"
 
 # Desplegament de mikrotik3
 create_router "mikrotik3" 2203 \
-  --intnets "r2-r3" "pl3" "pl3-direccio" \
-  --ips "10.1.0.234/30" "10.1.3.1/25" "10.1.3.129/25" \
-  --gateway "10.1.0.233"
+  --intnets "r2-r3" "Pl3a" "Pl3b" \
+  --ips "10.6.0.234/30" "10.6.3.1/25" "10.6.3.129/25" \
+  --gateway "10.6.0.233"
 
 log_info "=========================================="
 log_info "[+] Routers desplegats correctament."
